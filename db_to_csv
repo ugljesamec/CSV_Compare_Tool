@@ -3,18 +3,18 @@ FROM table_name;
 
 MySql
 SELECT id, name, email, balance, status
-INTO OUTFILE 'C:/Users/YourUser/Desktop/user.csv'
+INTO OUTFILE 'C:/user.csv'
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 FROM user;
 
 Include header
-SELECT 'column1','column2','column3'
+SELECT 'id','name','email', 'balance', 'status'
 UNION ALL
-SELECT column1, column2, column3
+SELECT id, name, email, balance, status
 FROM table_name
-INTO OUTFILE 'C:/path/to/file.csv'
+INTO OUTFILE 'C:/data.csv'
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n';

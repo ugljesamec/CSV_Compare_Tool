@@ -1,0 +1,20 @@
+SELECT column1, column2, column3
+FROM table_name;
+
+MySql
+SELECT column1, column2, column3
+INTO OUTFILE 'C:/data.csv'
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+FROM table_name;
+
+Include header
+SELECT 'column1','column2','column3'
+UNION ALL
+SELECT column1, column2, column3
+FROM table_name
+INTO OUTFILE 'C:/path/to/file.csv'
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n';

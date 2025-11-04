@@ -2,12 +2,12 @@ SELECT column1, column2, column3
 FROM table_name;
 
 MySql
-SELECT column1, column2, column3
-INTO OUTFILE 'C:/data.csv'
+SELECT id, name, email, balance, status
+INTO OUTFILE 'C:/Users/YourUser/Desktop/user.csv'
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
-FROM table_name;
+FROM user;
 
 Include header
 SELECT 'column1','column2','column3'
